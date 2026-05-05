@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:toing_clone/core/app_router/app_router.dart';
 import 'package:toing_clone/core/constent/app_string.dart';
 
 Future<void> main() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await ScreenUtil.ensureScreenSize();
-  WidgetsFlutterBinding.ensureInitialized();
+
+  await Future.delayed(Duration(microseconds: 1500), () {
+    FlutterNativeSplash.remove();
+  });
   runApp(const MyApp());
 }
 
