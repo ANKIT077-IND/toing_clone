@@ -72,7 +72,7 @@ class OnBoardingScreenBody extends StatelessWidget {
                   child: CustomButton(
                     onTap: () {
                       if (context.mounted) {
-                        context.go(AppRouter.loginScreen);
+                        context.push(AppRouter.loginScreen);
                       }
                     },
                     buttonName: AppString.loginWithPhoneNumber,

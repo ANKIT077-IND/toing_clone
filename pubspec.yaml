@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   auto_size_text: ^3.0.0
   flutter_native_splash: ^2.4.7
+  pinput: ^6.0.2
 
 dev_dependencies:
   flutter_test:
